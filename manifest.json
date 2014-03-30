@@ -1,0 +1,38 @@
+{
+   "manifest_version": 2,
+   "name": "MovieCast#",
+   "description": "Display full images while browsing Dribbble shots.",
+   "version": "0.1",
+   "icons": {
+      "128": "img/icon128.png",
+      "48": "img/icon48.png",
+      "16": "img/icon16.png"
+   },
+   "content_scripts": [ {
+      "js": ["js/inject.js"],
+      "matches": [ "*://streamcloud.eu/*", "*://bitshare.com/*" ],
+      "run_at": "document_end"
+   }],
+  "web_accessible_resources": [
+    "player.html",
+    "css/castVideos.css",
+    "js/castVideoPlayer.js", 
+    "img/play.png",
+    "img/pause.png",
+    "img/play-hover.png",
+    "img/play-press.png",
+    "img/pause-hover.png",
+    "img/timeline_bg_progress.png",
+    "img/timeline_indicator.png",
+    "img/timeline_indicator-hover.png",
+    "img/timeline_bg_track.png",
+    "img/ic_media_route_on_custom.png",
+    "img/ic_media_route_off_custom.png",
+    "img/audio_off.png",
+    "img/audio_on.png",
+    "img/audio_bg.png",
+    "img/audio_bg_track.png",
+    "img/audio_indicator.png",
+    "img/audio_bg_level.png"],
+  "permissions": ["tabs"]
+}
