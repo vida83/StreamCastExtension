@@ -849,8 +849,8 @@ CastPlayer.prototype.resourceSearchFunctions =  [
 //http://streamcloud.eu/ resources
  function findCloudPlayerSource(attemptCount) {
 
-  // in case the media content has been detected meanwhiel by another function 
-  // cancel the search function 
+  // in case the media content has been detected meanwhiel by another function
+  // cancel the search function
   if(this.mediaContent != null)
     return;
 
@@ -860,7 +860,7 @@ CastPlayer.prototype.resourceSearchFunctions =  [
   var callbackFunction = findCloudPlayerSource.bind(this);
 
   if (typeof jwplayer === "undefined") {
-      if(attemptCount <= MAX_ATTEMPT_COUNT) 
+      if(attemptCount <= MAX_ATTEMPT_COUNT)
           setTimeout(function() {callbackFunction(attemptCount++)}, 1000);
         return;
 
@@ -878,8 +878,20 @@ CastPlayer.prototype.resourceSearchFunctions =  [
     if(media != null || media != undefined) {
       
       this.mediaContent = new Array();
-      this.mediaContent['title'] = media.title + "";
-      this.mediaContent['source'] = media.file;
+        if (media.title != undefined) {
+            this.mediaContent['title'] = media.title + "";
+        } else {
+            var grepTitleFromStreamCloudPage = function() {
+                var page = document.getElementById("page");
+                var pageHeader = page.getElementsByClassName("header page");
+                if (!pageHeader.length) {
+                    return undefined;
+                }
+                return pageHeader[0].firstElementChild.innerHTML;
+            };
+            this.mediaContent['title'] = grepTitleFromStreamCloudPage();
+        }
+        this.mediaContent['source'] = media.file;
       this.mediaContent['thumb'] = media.image;
       this.mediaContent['subtitle'] = "";
 
