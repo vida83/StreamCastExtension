@@ -81,16 +81,16 @@ body {
   float:left;
   width: 65px;
   height: 40px;
-  background-image:url('chrome-extension://cngkdaedhpbblhnmjcandaacbjgjffaf/img/play.png');
+  background-image:url('chrome-extension://__MSG_@@extension_id__/img/play.png');
 }
 
 #play:hover {
-  background-image:url('chrome-extension://cngkdaedhpbblhnmjcandaacbjgjffaf/img/play-hover.png');
+  background-image:url('chrome-extension://__MSG_@@extension_id__/img/play-hover.png');
   cursor: pointer;
 }
 
 #play:press {
-  background-image:url('chrome-extension://cngkdaedhpbblhnmjcandaacbjgjffaf/img/play-press.png');
+  background-image:url('chrome-extension://__MSG_@@extension_id__/img/play-press.png');
 }
 
 #pause {
@@ -99,11 +99,11 @@ body {
   float:left;
   width: 65px;
   height: 40px;
-  background-image:url('chrome-extension://cngkdaedhpbblhnmjcandaacbjgjffaf/img/pause.png');
+  background-image:url('chrome-extension://__MSG_@@extension_id__/img/pause.png');
 }
 
 #pause:hover {
-  background-image:url('chrome-extension://cngkdaedhpbblhnmjcandaacbjgjffaf/img/pause-hover.png');
+  background-image:url('chrome-extension://__MSG_@@extension_id__/img/pause-hover.png');
   cursor: pointer;
 }
 
@@ -128,7 +128,7 @@ body {
   width: 1px;
   height: 36px;
   z-index: 10;
-  background-image:url('chrome-extension://cngkdaedhpbblhnmjcandaacbjgjffaf/img/timeline_bg_progress.png');
+  background-image:url('chrome-extension://__MSG_@@extension_id__/img/timeline_bg_progress.png');
   background-repeat:repeat-x;
 }
 
@@ -139,12 +139,12 @@ body {
   width: 6px;
   height: 36px;
   z-index: 1000;
-  background-image:url('chrome-extension://cngkdaedhpbblhnmjcandaacbjgjffaf/img/timeline_indicator.png');
+  background-image:url('chrome-extension://__MSG_@@extension_id__/img/timeline_indicator.png');
   background-repeat:repeat-x;
 }
 
 #progress_indicator:hover {
-  background-image:url('chrome-extension://cngkdaedhpbblhnmjcandaacbjgjffaf/img/timeline_indicator-hover.png');
+  background-image:url('chrome-extension://__MSG_@@extension_id__/img/timeline_indicator-hover.png');
   cursor: pointer;
 }
 
@@ -153,7 +153,7 @@ body {
   float:left;
   width: 600px;
   height: 36px;
-  background-image:url('chrome-extension://cngkdaedhpbblhnmjcandaacbjgjffaf/img/timeline_bg_track.png');
+  background-image:url('chrome-extension://__MSG_@@extension_id__/img/timeline_bg_track.png');
   background-repeat:repeat-x;
 }
 
@@ -163,7 +163,7 @@ body {
   width: 32px;
   height: 32px;
   display:none; 
-  background-image:url('chrome-extension://cngkdaedhpbblhnmjcandaacbjgjffaf/img/ic_media_route_on_custom.png');
+  background-image:url('chrome-extension://__MSG_@@extension_id__/img/ic_media_route_on_custom.png');
 }
 
 #casticonactive:hover {
@@ -176,7 +176,7 @@ body {
   height: 32px;
   margin: 14px 17px 14px 0px;
   display:block; 
-  background-image:url('chrome-extension://cngkdaedhpbblhnmjcandaacbjgjffaf/img/ic_media_route_off_custom.png');
+  background-image:url('chrome-extension://__MSG_@@extension_id__/img/ic_media_route_off_custom.png');
 }
 
 #casticonidle:hover {
@@ -189,7 +189,7 @@ body {
   width: 32px;
   height: 32px;
   display:none; 
-  background-image:url('chrome-extension://cngkdaedhpbblhnmjcandaacbjgjffaf/img/audio_off.png');
+  background-image:url('chrome-extension://__MSG_@@extension_id__/img/audio_off.png');
 }
 
 #audio_off:hover {
@@ -202,7 +202,7 @@ body {
   height: 32px;
   margin: 14px 10px 10px 0px;
   display:block; 
-  background-image:url('chrome-extension://cngkdaedhpbblhnmjcandaacbjgjffaf/img/audio_on.png');
+  background-image:url('chrome-extension://__MSG_@@extension_id__/img/audio_on.png');
 }
 
 #audio_on:hover {
@@ -216,7 +216,7 @@ body {
   height: 124px;
   margin: 50px 5px 0px -50px;
   display:none; 
-  background-image:url('chrome-extension://cngkdaedhpbblhnmjcandaacbjgjffaf/img/audio_bg.png');
+  background-image:url('chrome-extension://__MSG_@@extension_id__/img/audio_bg.png');
   position:relative;
   z-index:10;
 }
@@ -228,7 +228,7 @@ body {
   height: 100px;
   margin: 62px 19px 0px -50px;
   display:none; 
-  background-image:url('chrome-extension://cngkdaedhpbblhnmjcandaacbjgjffaf/img/audio_bg_track.png');
+  background-image:url('chrome-extension://__MSG_@@extension_id__/img/audio_bg_track.png');
   position:relative;
   z-index:1000;
 }
@@ -244,7 +244,7 @@ body {
   height: 5px;
   margin: 62px 17px 0px -50px;
   display:none; 
-  background-image:url('chrome-extension://cngkdaedhpbblhnmjcandaacbjgjffaf/img/audio_indicator.png');
+  background-image:url('chrome-extension://__MSG_@@extension_id__/img/audio_indicator.png');
   position:relative;
   z-index:1000;
 }
@@ -260,7 +260,7 @@ body {
   height: 50px;
   margin: 62px 17px 0px -50px;
   display:none; 
-  background-image:url('chrome-extension://cngkdaedhpbblhnmjcandaacbjgjffaf/img/audio_bg_level.png');
+  background-image:url('chrome-extension://__MSG_@@extension_id__/img/audio_bg_level.png');
   position:relative;
   z-index:1000;
 }
