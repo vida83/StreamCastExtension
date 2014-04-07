@@ -1,7 +1,7 @@
 {
    "manifest_version": 2,
    "name": "MovieCast#",
-   "description": "Display full images while browsing Dribbble shots.",
+   "description": "Extension to stream content from cloud stream providers to Chromecast",
    "version": "0.1",
    "icons": {
       "128": "img/icon128.png",
