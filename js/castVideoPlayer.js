@@ -35,7 +35,7 @@ var DEVICE_STATE = {
   'IDLE' : 0, 
   'ACTIVE' : 1, 
   'WARNING' : 2, 
-  'ERROR' : 3,
+  'ERROR' : 3
 };
 
 /**
