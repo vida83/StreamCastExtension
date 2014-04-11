@@ -6,17 +6,17 @@ castVideoPlayerCss.rel = "stylesheet";
 (document.head||document.documentElement).appendChild(castVideoPlayerCss);
 
 
-loadTextResource(chrome.extension.getURL('player.html'), onPlayerHtmlSuccuess);
+loadTextResource(chrome.extension.getURL('player.html'), onPlayerHtmlSuccess);
 
 
 // help function to load resources
-function loadTextResource(url, onSucessFunction) {
+function loadTextResource(url, onSuccessFunction) {
 
    var xhr = new XMLHttpRequest();
 
    xhr.onreadystatechange = function (e) { 
     if (xhr.readyState == 4 && xhr.status == 200) {
-     onSucessFunction(xhr.responseText);
+     onSuccessFunction(xhr.responseText);
     }
    }
 
@@ -25,7 +25,7 @@ function loadTextResource(url, onSucessFunction) {
  xhr.send();
 }
 
-function onPlayerHtmlSuccuess(responseText) {
+function onPlayerHtmlSuccess(responseText) {
 	var castVideoPlayerContentHtml = document.createElement('div');
 	castVideoPlayerContentHtml.innerHTML = responseText;
 
