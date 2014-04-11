@@ -10,7 +10,7 @@
    },
    "content_scripts": [ {
       "js": ["js/inject.js"],
-      "matches": [ "*://streamcloud.eu/*", "*://bitshare.com/*" ],
+      "matches": [ "*://streamcloud.eu/*", "*://bitshare.com/*", "*://www.ecostream.tv/*"],
       "run_at": "document_end"
    }],
   "web_accessible_resources": [

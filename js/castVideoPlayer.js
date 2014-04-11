@@ -867,7 +867,7 @@ CastPlayer.prototype.resourceSearchFunctions =  [
   } else {
 
 
-    if (jwplayer().getPlaylist() == undefined) {
+    if (jwplayer().getPlaylist == undefined || jwplayer().getPlaylist() == undefined) {
       if(attemptCount <= MAX_ATTEMPT_COUNT)
         setTimeout(function() {callbackFunction(attemptCount++)}, 1000);
       return;
@@ -883,6 +883,9 @@ CastPlayer.prototype.resourceSearchFunctions =  [
         } else {
             var grepTitleFromStreamCloudPage = function() {
                 var page = document.getElementById("page");
+                if (page == undefined) {
+                    return undefined;
+                }
                 var pageHeader = page.getElementsByClassName("header page");
                 if (!pageHeader.length) {
                     return undefined;
@@ -891,7 +894,13 @@ CastPlayer.prototype.resourceSearchFunctions =  [
             };
             this.mediaContent['title'] = grepTitleFromStreamCloudPage();
         }
-        this.mediaContent['source'] = media.file;
+
+      if(media.file.indexOf("http") != 0) {
+          this.mediaContent['source'] = "http://" + window.location.host + media.file;
+      } else {
+          this.mediaContent['source'] = media.file;
+      }
+
       this.mediaContent['thumb'] = media.image;
       this.mediaContent['subtitle'] = "";
 
