@@ -6,3 +6,4 @@ Google Chrome extension allowing to cast videos from different streaming provide
 Supported streaming providers:
 
 - StreamCloud
+- ecostream
